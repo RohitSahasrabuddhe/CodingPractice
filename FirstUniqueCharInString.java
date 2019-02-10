@@ -18,7 +18,7 @@ class FirstUniqueCharInString {
         return -1;
     }
 
-    public int firstUniqChar(String s) {
+    public int firstUniqCharFaster(String s) {
         boolean[] flags = new boolean[26];
         int[] vals = new int[26];
         
