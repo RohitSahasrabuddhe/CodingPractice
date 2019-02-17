@@ -1,7 +1,4 @@
 
-
-
-
  // Complete the count_palindromes function below.
     public static int count = 0;
     static int count_palindromes(String s) {
