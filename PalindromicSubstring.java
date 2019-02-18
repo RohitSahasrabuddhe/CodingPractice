@@ -6,7 +6,6 @@ class PalindromicSubstring {
         int max = 0;
         int start = 0;
         int end = 0;
-        int index = 0;
         for(int i = 0; i < s.length(); i++) {
             int l1 = expandAroundCenter(s, i, i);
             int l2 = expandAroundCenter(s, i, i+1);
