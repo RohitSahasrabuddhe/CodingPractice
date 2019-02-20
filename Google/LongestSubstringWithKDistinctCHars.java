@@ -1,7 +1,6 @@
 class LongestSubstringWithKDistinctCHars {
     public int lengthOfLongestSubstringKDistinct(String s, int k) {
-        // Sliding window approach
-        
+        // Sliding window approach      
         
         int start = 0;
         int end = 0;
