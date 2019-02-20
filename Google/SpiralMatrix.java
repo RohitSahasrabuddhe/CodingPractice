@@ -13,30 +13,22 @@ class SpiralMatrix {
             for (int i = l, j = l; j < n-l; j++) {
                 op.add(matrix[i][j]);
                 c++;
-                if (c >= m*n) {
-                    return op;
-                }
+                if (c >= m*n) return op;
             }
             for (int i = l+1, j = n-l-1; i < m-l; i++) {
                 op.add(matrix[i][j]);
                 c++;
-                if (c >= m*n) {
-                    return op;
-                }
+                if (c >= m*n) return op;
             }
             for (int i = m-l-1, j = n-l-2; j >= l; j--) {
                 op.add(matrix[i][j]);
                 c++;
-                if (c >= m*n) {
-                    return op;
-                }
+                if (c >= m*n) return op;
             }
             for (int i = m-l-2, j = l; i > l; i-- ) {
                 op.add(matrix[i][j]);
                 c++;
-                if (c >= m*n) {
-                    return op;
-                }
+                if (c >= m*n) return op;
             }
             l++;
         }
