@@ -1,25 +1,21 @@
-class Search2DMatrix {
+class Solution {
     public boolean searchMatrix(int[][] matrix, int target) {
-        int m = matrix.length;
-        int n = matrix[0].length;
+        if (matrix == null || matrix.length == 0) {
+            return false;
+        }
+        int n = matrix.length;
+        int m = matrix[0].length;
         
-        int mStart = 0;
-        int nStart = 0;
-        int mEnd = m;
-        int nEnd = n;
-        while (mStart < mEnd && nStart < nEnd) {
-            int mMid = (mEnd -mStart)/2;
-            int nMid = (nEnd-nStart)/2;
-            if (target == matrix[mMid][nMid]){
+        int i = n-1;
+        int j = 0;
+        
+        while(i >= 0 && j < m) {
+            if(matrix[i][j] == target) {
                 return true;
-            }
-            else if (target > matrix[mMid][nMid]) {
-                mStart = mMid+1;
-                nStart = nMid+1;
-            }
-            else{
-                mEnd = mMid-1;
-                nEnd = nMid-1;
+            } else if(matrix[i][j] > target) {
+                i--;
+            } else {
+                j++;
             }
         }
         return false;
