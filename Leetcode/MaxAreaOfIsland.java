@@ -1,5 +1,4 @@
-class Solution {
-    
+class Solution { 
 
     public int maxAreaOfIsland(int[][] grid) {
             int max_area = 0;
