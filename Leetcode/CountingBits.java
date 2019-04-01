@@ -11,3 +11,24 @@ class CountingBits {
         return output;
     }
 }
+
+class Solution {
+    public int[] countBits(int num) {
+        int[] op = new int[num+1];
+        
+        for(int i = 0; i <= num; i++){
+            op[i] = getOnes(i);
+        }
+        return op;
+    }
+    
+    public int getOnes(int n){
+        int sum = 0;
+        
+        while(n > 0){
+            sum++;
+            n = n & (n-1);
+        }
+        return sum;
+    }
+}
